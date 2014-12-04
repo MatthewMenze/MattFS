@@ -1,0 +1,28 @@
+FileSystem:
+	DirectoryPartition:
+		TextFile
+		/Dir/FileName/StartBlock (blocks)
+		Alphabetically ordered by /Dir/FileName
+		directories have /-/-1 appended to end!
+		^ -> root dir
+	DataPartition:
+		1024 Byte Blocks
+		24 Bytes - Next Block
+			(Also indicates EOF, and available/used)
+		1000 Bytes - Data
+	FileSystemManager
+		Data		
+			SizeOfFS
+			Last Allocated Block
+			Allocated Blocks
+			Free Blocks
+		Methods
+			Write
+			Read
+			Delete
+			Allocate
+			Defrag (maybe)
+			Print Dir/subDir
+			Move
+			Expand/Shrink
+			GetData
